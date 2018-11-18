@@ -1,0 +1,88 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int str_to_num(char *str)
+{
+	int i, result = 0;
+	for (i = 0; str[i] != '\0'; i++)
+		result = result * 10 + str[i] - '0';
+	return result;
+}
+void str_cpy(char *source, char *destination)
+{
+	int i = 0;
+	do
+	{
+		destination[i] = source[i];
+	} while (source[i++] != '\0');
+}
+char** splitStr(char *str, char delimiter, int *num)
+{
+	int i, j = 0, size = 10, numberOfStrings = 0;// openParenthasis = 0;
+	char **strings;
+	strings = (char**)malloc(sizeof(char*) * 10);
+	for (i = 0; i < size; i++)
+		strings[i] = (char*)malloc(sizeof(char) * 30);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if ((str[i] == delimiter) || (str[i] == ',') || (str[i] == ']') || str[i] == '\n'||str[i]=='(')
+		{
+			if (j == 0)
+			{
+				continue;
+			}
+			strings[numberOfStrings][j] = '\0';
+			j = 0;
+			if (numberOfStrings == size - 1)
+			{
+				size += 5;
+				strings = (char**)realloc(strings, sizeof(char*)*size);
+				for (j = numberOfStrings + 1; j < size; j++)
+				{
+					strings[j] = (char*)malloc(sizeof(char) * 30);
+				}
+				j = 0;
+			}
+			numberOfStrings++;
+			continue;
+		}
+		strings[numberOfStrings][j] = str[i];
+		j++;
+	}
+	if (j == 0)
+		numberOfStrings--;
+	else
+		strings[numberOfStrings][j] = '\0';
+	*num = numberOfStrings + 1;
+	size--;
+	for (; size != numberOfStrings; size--)
+		free(strings[size]);
+	return strings;
+}
+
+int str_cmp(char *str1, char *str2)
+{
+	int i = 0;
+	while ((str1[i] == str2[i] || str1[i] - 'a' == str2[i] - 'A' || str1[i] - 'A' == str2[i] - 'a') && (str1[i] != '\0') && (str2[i] != '\0')){
+		i++;
+	}
+	if ((str1[i] != '\0') && (str2[i] != '\0'))
+	{
+		if (str1[i] > str2[i])
+			return -1;
+		else
+			return 1;
+	}
+	if (str1[i] == '\0' &&str2[i] != '\0')
+	{
+		return 1;
+	}
+	else if (str2[i] == '\0'&&str1[i] != '\0')
+	{
+		return -1;
+	}
+	else
+	{
+		return 0;
+	}
+}

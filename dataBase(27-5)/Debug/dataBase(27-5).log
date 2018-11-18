@@ -1,0 +1,19 @@
+﻿Build started 6/2/2018 1:43:21 AM.
+     1>Project "C:\Users\aslam\Documents\Visual Studio 2013\Projects\dataBase(27-5)\dataBase(27-5)\dataBase(27-5).vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         F:\New folder6\VC\bin\CL.exe /c /I"C:\Users\aslam\Documents\Visual Studio 2013\Projects\dllFile\dllFile" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /D _MBCS /D _CRT_SECURE_NO_WARNINGS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt versionControl.cpp
+         versionControl.cpp
+       Link:
+         F:\New folder6\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\aslam\Documents\Visual Studio 2013\Projects\dataBase(27-5)\Debug\dataBase(27-5).exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\aslam\Documents\Visual Studio 2013\Projects\dllFile\Debug" "F:\New folder\pthreads-w32-2-9-1-release\Pre-built.2\lib\x86\pthreadVC2.lib" "C:\Users\aslam\Documents\Visual Studio 2013\Projects\dllFile\Debug\dllFile.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\aslam\Documents\Visual Studio 2013\Projects\dataBase(27-5)\Debug\dataBase(27-5).pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\aslam\Documents\Visual Studio 2013\Projects\dataBase(27-5)\Debug\dataBase(27-5).lib" /MACHINE:X86 -Ipthread Debug\Source.obj
+         Debug\versionControl.obj
+     1>LINK : warning LNK4044: unrecognized option '/Ipthread'; ignored
+         dataBase(27-5).vcxproj -> C:\Users\aslam\Documents\Visual Studio 2013\Projects\dataBase(27-5)\Debug\dataBase(27-5).exe
+       PostBuildEvent:
+         xcopy /y /d "C:\Users\aslam\Documents\Visual Studio 2013\Projects\dllFile\Debug\dllFile.dll" "C:\Users\aslam\Documents\Visual Studio 2013\Projects\dataBase(27-5)\Debug\"
+         :VCEnd
+         0 File(s) copied
+     1>Done Building Project "C:\Users\aslam\Documents\Visual Studio 2013\Projects\dataBase(27-5)\dataBase(27-5)\dataBase(27-5).vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.19
